@@ -11,11 +11,11 @@ export default function useGlobalGifs () {
     // * https://dev.to/jereef/como-usar-react-context-de-manera-efectiva-1h6l
     // --------------------------------------------------------------------------------------------------------------------------
     
-    const context = React.useContext(GifsContext)
+    // const context = React.useContext(GifsContext)
 
-    if(context === undefined) {
-        throw new Error('useGlobalGifs se debe utilizar dentro de un GifsContextProvider.')
-    }
+    // if(context === undefined) {
+    //     throw new Error('useGlobalGifs se debe utilizar dentro de un GifsContextProvider.')
+    // }
 
-    return context
+    return useContext(GifsContext).gifs
 }
